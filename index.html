@@ -467,6 +467,18 @@ Steady improvement.</p>
       }
     });
 
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (navToggle && navLinks) {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    }
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -477,6 +489,8 @@ Steady improvement.</p>
             behavior: 'smooth',
             block: 'start'
           });
+          nav.classList.remove('nav-open');
+          navToggle?.setAttribute('aria-expanded', 'false');
         }
       });
     });
