@@ -379,8 +379,8 @@ h5, .h5 {
 
 .nav-cta {
   margin-left: var(--spacing-4);
-  background-color: #252e4a;
-  background-image: linear-gradient(180deg, #3d486a 0%, #212a43 100%);
+  background-color: #1f2a41;
+  background-image: linear-gradient(180deg, #2a3551 0%, #182038 100%);
   color: var(--text-on-dark);
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 12px 24px;
@@ -391,8 +391,8 @@ h5, .h5 {
 }
 
 .nav-cta:hover {
-  background-color: #1f273f;
-  background-image: linear-gradient(180deg, #343f5f 0%, #1a2237 100%);
+  background-color: #182035;
+  background-image: linear-gradient(180deg, #243048 0%, #141c2f 100%);
   transform: translateY(-1px);
 }
 
@@ -497,8 +497,8 @@ h5, .h5 {
 }
 
 .hero-buttons .btn-primary {
-  background-color: #2b3554;
-  background-image: linear-gradient(90deg, #3d486a 0%, #212a43 100%);
+  background-color: #1f2a41;
+  background-image: linear-gradient(90deg, #2a3551 0%, #182038 100%);
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 14px 28px;
   font-size: var(--font-size-sm);
@@ -507,8 +507,8 @@ h5, .h5 {
 }
 
 .hero-buttons .btn-primary:hover {
-  background-color: #24304c;
-  background-image: linear-gradient(90deg, #343f5f 0%, #1a2237 100%);
+  background-color: #182035;
+  background-image: linear-gradient(90deg, #243048 0%, #141c2f 100%);
 }
 
 .hero-buttons .btn-outline {
