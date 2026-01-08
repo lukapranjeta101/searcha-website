@@ -1752,7 +1752,7 @@ h5, .h5 {
 
 @media (max-width: 768px) {
   .nav-logo img {
-    height: 72px;
+    height: 60px;
   }
   .container {
     padding: 0 var(--spacing-4);
