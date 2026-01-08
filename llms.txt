@@ -1,0 +1,23 @@
+# llms.txt for https://searcha.me
+# Owner: Searcha
+# Description: Dental marketing agency serving Cleveland, Ohio
+
+User-agent: *
+Allow: /
+
+# Primary topics
+Topic: Dental marketing
+Topic: Dental SEO
+Topic: Local SEO for dental practices
+Topic: Google Business Profile optimization
+Topic: AI search visibility
+
+# Geographic focus
+Location: Cleveland, Ohio
+Location: Northeast Ohio
+
+# Preferred canonical URL
+Canonical: https://searcha.me/
+
+# Contact
+Contact: hello@searcha.me
