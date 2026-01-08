@@ -352,7 +352,7 @@ h5, .h5 {
 .nav-logo {
   display: flex;
   align-items: center;
-  margin-left: -24px;
+  margin-left: 0;
 }
 
 .nav-logo img {
@@ -433,7 +433,7 @@ h5, .h5 {
   flex-direction: column;
   flex: 1;
   justify-content: flex-end;
-  padding-top: 64px;
+  padding-top: 200px;
 }
 
 .hero-bg {
@@ -1689,9 +1689,6 @@ h5, .h5 {
     font-size: 2.25rem;
   }
 
-  .hero > .container {
-    padding-top: 100px;
-  }
 
   .case-studies-grid {
     grid-template-columns: 1fr;
@@ -1775,9 +1772,6 @@ h5, .h5 {
     padding-bottom: var(--spacing-6);
   }
 
-  .hero > .container {
-    padding-top: 64px;
-  }
 
   .hero-title {
     font-size: 1.875rem;
