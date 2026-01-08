@@ -811,6 +811,8 @@ h5, .h5 {
   padding: var(--spacing-6);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-soft);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08),
+              0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
 .problem-card-accent {
@@ -897,6 +899,8 @@ h5, .h5 {
   background-color: #f1f4f8;
   background-image: var(--grad-card);
   border: 1px solid var(--border-soft);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08),
+              0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
 .solution-card-title {
@@ -1251,6 +1255,8 @@ h5, .h5 {
   padding: var(--spacing-6);
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-soft);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08),
+              0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
 .testimonial-header {
