@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-optin.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -549,8 +550,8 @@ Steady improvement.</p>
       <div class="footer-bottom">
         <p class="footer-copyright">&copy; 2025 Searcha. All rights reserved.</p>
         <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
         </div>
       </div>
     </div>
@@ -647,5 +648,161 @@ Steady improvement.</p>
     });
   </script>
 
+  <!-- SMS Opt-In Modal -->
+  <div
+    class="optin-modal-backdrop"
+    id="optin-modal-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="optin-modal-title"
+    aria-describedby="optin-modal-desc"
+  >
+    <div class="optin-modal" id="optin-modal">
+      <!-- Modal Header -->
+      <header class="optin-modal-header">
+        <h2 class="optin-modal-title" id="optin-modal-title">Opt-In Method</h2>
+        <p class="optin-modal-subtitle" id="optin-modal-desc">Compliant Opt-in Form Example</p>
+        <button
+          type="button"
+          class="optin-modal-close"
+          id="optin-modal-close"
+          aria-label="Close modal"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </header>
+
+      <!-- Modal Body -->
+      <div class="optin-modal-body">
+        <div class="optin-columns">
+          <!-- Left Column: Form -->
+          <div class="optin-form-panel">
+            <form class="optin-form" id="optin-form" novalidate>
+              <!-- First Name -->
+              <div class="optin-form-group">
+                <label class="optin-label" for="optin-first-name">First Name</label>
+                <input
+                  type="text"
+                  id="optin-first-name"
+                  name="first_name"
+                  class="optin-input"
+                  placeholder="Enter first name"
+                  autocomplete="given-name"
+                >
+              </div>
+
+              <!-- Last Name -->
+              <div class="optin-form-group">
+                <label class="optin-label" for="optin-last-name">Last Name</label>
+                <input
+                  type="text"
+                  id="optin-last-name"
+                  name="last_name"
+                  class="optin-input"
+                  placeholder="Enter last name"
+                  autocomplete="family-name"
+                >
+              </div>
+
+              <!-- Phone -->
+              <div class="optin-form-group">
+                <label class="optin-label" for="optin-phone">
+                  Phone <span class="required">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="optin-phone"
+                  name="phone"
+                  class="optin-input"
+                  placeholder="(555) 555-5555"
+                  autocomplete="tel"
+                  required
+                >
+                <span class="optin-error-msg" role="alert"></span>
+              </div>
+
+              <!-- Email -->
+              <div class="optin-form-group">
+                <label class="optin-label" for="optin-email">
+                  Email <span class="required">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="optin-email"
+                  name="email"
+                  class="optin-input"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                >
+                <span class="optin-error-msg" role="alert"></span>
+              </div>
+
+              <!-- Checkbox 1: Transactional Consent (OPTIONAL) -->
+              <div class="optin-checkbox-group">
+                <input
+                  type="checkbox"
+                  id="optin-consent-transactional"
+                  name="consent_transactional"
+                  class="optin-checkbox"
+                >
+                <label class="optin-checkbox-label" for="optin-consent-transactional">
+                  I consent to receive transactional messages from <span class="brand-name">Searcha</span> at the phone number provided. Message frequency may vary. Message &amp; Data rates may apply. Reply HELP for help or STOP to opt-out.
+                </label>
+              </div>
+
+              <!-- Checkbox 2: Marketing Consent (OPTIONAL) -->
+              <div class="optin-checkbox-group">
+                <input
+                  type="checkbox"
+                  id="optin-consent-marketing"
+                  name="consent_marketing"
+                  class="optin-checkbox"
+                >
+                <label class="optin-checkbox-label" for="optin-consent-marketing">
+                  I consent to receive marketing and promotional messages from <span class="brand-name">Searcha</span> at the phone number provided. Message frequency may vary. Message &amp; Data rates may apply. Reply HELP for help or STOP to opt-out.
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="optin-submit-btn">Sign Up</button>
+
+              <!-- Footer Links -->
+              <div class="optin-footer-links">
+                <a href="privacy.html" class="optin-footer-link">Privacy</a>
+                <a href="terms.html" class="optin-footer-link">Terms of Service</a>
+              </div>
+            </form>
+
+            <!-- Success State -->
+            <div class="optin-success">
+              <svg class="optin-success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+              <h3 class="optin-success-title">Thanks — you're opted in.</h3>
+              <p class="optin-success-text">We'll be in touch soon.</p>
+            </div>
+          </div>
+
+                  </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Action Button (FAB) for SMS Opt-In -->
+  <button type="button" class="optin-fab" data-optin-trigger aria-label="Sign up for messages">
+    <span class="optin-fab-icon">
+      <svg viewBox="0 0 24 24">
+        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z"/>
+      </svg>
+    </span>
+    <span class="optin-fab-text">Sign up for messages</span>
+  </button>
+
+  <script src="sms-optin.js"></script>
 </body>
 </html>
