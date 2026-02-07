@@ -2699,22 +2699,29 @@
         height: 36px;
       }
 
+      .roas-stats-row {
+        top: 16%;
+        left: 50%;
+        transform: translateX(-50%) scale(0.85);
+        gap: 6px;
+      }
+
       .roas-float-card {
-        padding: 6px 10px;
+        padding: 5px 8px;
       }
 
       .roas-float-value {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
 
       .roas-float-icon {
-        width: 26px;
-        height: 26px;
+        width: 22px;
+        height: 22px;
       }
 
       .roas-float-icon svg {
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
       }
     }
   </style>
@@ -3228,7 +3235,7 @@
     <div class="popup-card" id="popup-form" role="dialog" aria-modal="true" aria-labelledby="popup-title">
       <button class="popup-close" id="popup-close" aria-label="Close popup">×</button>
       <div class="popup-title" id="popup-title">Ready to grow?</div>
-      <form class="popup-form" action="https://formsubmit.co/lukapranjeta18@gmail.com" method="POST">
+      <form class="popup-form" id="popup-form-element" action="https://formsubmit.co/lukapranjeta18@gmail.com" method="POST" data-next="https://searcha.me/">
         <input type="hidden" name="_subject" value="New Ready to Grow Form Submission">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://searcha.me/">
@@ -3586,6 +3593,27 @@
         closePopup();
       }
     });
+
+    // ========================================
+    // POPUP FORM SUBMIT (PREVENT URL QUERY)
+    // ========================================
+    const popupForm = document.getElementById('popup-form-element');
+    if (popupForm) {
+      popupForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const formData = new FormData(popupForm);
+        const actionUrl = popupForm.getAttribute('action');
+        const nextUrl = popupForm.getAttribute('data-next') || 'https://searcha.me/';
+
+        fetch(actionUrl, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors'
+        }).finally(() => {
+          window.location.href = nextUrl;
+        });
+      });
+    }
   </script>
 
 </body>
